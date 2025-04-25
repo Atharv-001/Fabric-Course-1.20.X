@@ -1,46 +1,21 @@
 {
-	"schemaVersion": 1,
-	"id": "mccourse",
-	"version": "${version}",
-	"name": "MC Course Mod",
-	"description": "This is an example description! Tell everyone what your mod is about!",
-	"authors": [
-		"Kaupejoe"
-	],
-	"contact": {
-		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
-	},
-	"license": "MIT",
-	"icon": "assets/mccourse/icon.png",
-	"environment": "*",
-	"entrypoints": {
-		"main": [
-			"net.kaupenjoe.mccourse.MCCourseMod"
-		],
-		"fabric-datagen": [
-			"net.kaupenjoe.mccourse.MCCourseModDataGenerator"
-		],
-		"client": [
-			"net.kaupenjoe.mccourse.MCCourseModClient"
-		],
-		"rei_client": [
-			"net.kaupenjoe.mccourse.compat.MCCourseModREIClientPlugin"
-		],
-		"terrablender": [
-			"net.kaupenjoe.mccourse.world.biome.ModTerraBlenderAPI"
-		]
-	},
-	"mixins": [
-		"mccourse.mixins.json"
-	],
-	"depends": {
-		"fabricloader": ">=0.14.21",
-		"minecraft": "~1.20",
-		"java": ">=17",
-		"fabric-api": "*"
-	},
-	"suggests": {
-		"another-mod": "*"
-	}
+  "schemaVersion": 1,
+  "id": "triggerbotmod",
+  "version": "1.0.0",
+  "name": "TriggerBot Mod",
+  "description": "Auto-attacks when the crosshair is over an entity.",
+  "authors": ["Atharv"],
+  "contact": {},
+  "license": "MIT",
+  "environment": "*",
+  "entrypoints": {
+    "client": [
+      "com.example.triggerbot.TriggerBotMod"
+    ]
+  },
+  "depends": {
+    "fabricloader": ">=0.14.21",
+    "fabric": "*",
+    "minecraft": "1.20.1"
+  }
 }

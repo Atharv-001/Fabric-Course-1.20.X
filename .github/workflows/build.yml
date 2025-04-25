@@ -3,23 +3,23 @@ name: Build Mod
 on:
   push:
     branches:
-      - master # Use the branch you're pushing to
-  pull_request:
-    branches:
-      - master  # Same branch for pull requests
+      - master  # Adjust to your branch name
+  workflow_dispatch:
 
 jobs:
   build:
-    runs-on: ubuntu-latest  # Use the appropriate runner for your build
-    
+    runs-on: ubuntu-latest  # Or windows-latest if you're building on Windows
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-        
+
       - name: Set up JDK 17
         uses: actions/setup-java@v2
         with:
           java-version: '17'
+          distribution: 'adoptopenjdk'  # You can use 'adoptopenjdk', 'zulu', or 'amazon-corretto'
 
-      - name: Run Gradle build
-        run: ./gradlew build
+      - name: Build with Gradle
+        run: ./gradlew build  # Or gradlew.bat on Windows
+

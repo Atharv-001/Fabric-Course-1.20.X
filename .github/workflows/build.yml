@@ -3,10 +3,10 @@ name: Build Mod
 on:
   push:
     branches:
-      - main  # Use the branch you're pushing to
+      - master # Use the branch you're pushing to
   pull_request:
     branches:
-      - main  # Same branch for pull requests
+      - master  # Same branch for pull requests
 
 jobs:
   build:

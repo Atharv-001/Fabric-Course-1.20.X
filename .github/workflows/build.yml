@@ -1,0 +1,25 @@
+name: Build Mod
+
+on:
+  push:
+    branches:
+      - main  # Use the branch you want to trigger builds on
+  pull_request:
+    branches:
+      - main  # Same here
+
+jobs:
+  build:
+    runs-on: ubuntu-latest  # You can use windows-latest or macos-latest depending on your needs
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up JDK
+        uses: actions/setup-java@v2
+        with:
+          java-version: '17'  # Ensure this matches the version of Java your project uses
+
+      - name: Build with Gradle
+        run: ./gradlew build  # This will trigger Gradle build. Use gradlew.bat for Windows

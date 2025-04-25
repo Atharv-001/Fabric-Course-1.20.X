@@ -3,7 +3,7 @@
 <img src="https://kaupenjoe.net/files/General/Minecraft/Modding/Course/fabric-120x-course-image.jpg" alt="Logo" width="1000"/> 
 </p></a>
 
-# Modding by Kaupenjoe: Minecraft 1.20.X Modding Course with Fabric
+# Modding by at
 This is the GitHub Repository for Kaupenjoe's Minecraft Modding Course using Fabric for version 1.20.X. 
 
 It covers a variety of Topics, from Custom Tools, to Custom Armor, all the way to Custom Block Entities and Custom Mobs. 

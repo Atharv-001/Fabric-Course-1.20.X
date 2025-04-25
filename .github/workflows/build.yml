@@ -8,7 +8,7 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest  # Or use 'windows-latest' or 'macos-latest' if needed
+    runs-on: ubuntu-latest  # Or windows-latest if you're building on Windows
 
     steps:
       - name: Checkout code
@@ -17,8 +17,8 @@ jobs:
       - name: Set up JDK 17
         uses: actions/setup-java@v2
         with:
-          java-version: '17'  # Set the Java version you want to use
-          distribution: 'adoptopenjdk'  # You can use 'adoptopenjdk', 'zulu', or 'amazon-corretto'
+          java-version: '17'
+          distribution: 'temurin'  # Use 'temurin' instead of 'adoptopenjdk'
 
       - name: Build with Gradle
         run: ./gradlew build  # Or gradlew.bat for Windows

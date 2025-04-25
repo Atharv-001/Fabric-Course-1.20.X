@@ -8,7 +8,7 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest  # Or windows-latest if you're building on Windows
+    runs-on: ubuntu-latest
 
     steps:
       - name: Checkout code
@@ -18,7 +18,10 @@ jobs:
         uses: actions/setup-java@v2
         with:
           java-version: '17'
-          distribution: 'temurin'  # Use 'temurin' instead of 'adoptopenjdk'
+          distribution: 'temurin'
+
+      - name: Make gradlew executable
+        run: chmod +x ./gradlew
 
       - name: Build with Gradle
-        run: ./gradlew build  # Or gradlew.bat for Windows
+        run: ./gradlew build
